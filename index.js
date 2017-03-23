@@ -49,9 +49,20 @@ app.get('/token', function(request, response) {
     });
 });
 
-// Create http server and run it
-var server = http.createServer(app);
-var port = process.env.PORT || 3000;
+let server = require('http').Server(app);
+var port = process.env.PORT || 8000
+
 server.listen(port, function() {
-    console.log('Express server running on *:' + port);
+    console.log("App is running on port " + port);
 });
+
+// app.listen(process.env.PORT || 3000, function(){
+//   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+// });
+
+// // Create http server and run it
+// var server = http.createServer(app);
+// var port = process.env.PORT || 3000;
+// server.listen(port, function() {
+//     console.log('Express server running on *:' + port);
+// });
