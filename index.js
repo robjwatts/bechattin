@@ -6,7 +6,7 @@ process.env.TWILIO_API_KEY
 process.env.TWILIO_API_SECRET
 process.env.TWILIO_CONFIGURATION_SID
 
-require('dotenv').load();
+// require('dotenv').load();
 var http = require('http');
 var path = require('path');
 var AccessToken = require('twilio').AccessToken;
